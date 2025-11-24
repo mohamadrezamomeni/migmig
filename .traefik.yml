@@ -4,7 +4,7 @@ iconPath: .assets/icon.png
 
 import: github.com/mohamadrezamomeni/migmig
 
-summary: "[Demo] Add Request Header"
+summary: "[migmig] change response"
 
 testData:
   Headers:
