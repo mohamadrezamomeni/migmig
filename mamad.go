@@ -16,7 +16,7 @@ func CreateConfig() *Config {
 	}
 }
 
-type Demo struct {
+type Migmig struct {
 	next    http.Handler
 	headers map[string]string
 	name    string
@@ -27,13 +27,13 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 		return nil, fmt.Errorf("headers cannot be empty")
 	}
 
-	return &Demo{
+	return &Migmig{
 		headers: config.Headers,
 		next:    next,
 		name:    name,
 	}, nil
 }
 
-func (a *Demo) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
+func (a *Migmig) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
 	rw.Write([]byte("hellllllo"))
 }
